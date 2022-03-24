@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons8-calculator-64.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Calculator app</title>
+
+
+</head>
+
+<script src="./main.js"></script>
+<body>
+
+  <section class="calculator">
+
+    <header>
+    
+
+      <div class="container-footer">
+        <p class="calc">
+          calc
+        </p>
+        
+        <div class="father-theme">
+          <p class="theme">
+            THEME
+          </p>
+            <div class="options">
+              <div class="option-theme">
+                <label for="theme1">1</label>
+
+                <div class="background-radioButton background-1">
+                  <input type="radio" name="theme" id="theme1" value="1" checked onclick="theme(1)">
+                </div>
+
+              </div>
+
+              <div class="option-theme">
+                <label for="theme2">2</label>
+
+                <div class="background-radioButton">
+                  <input type="radio" name="theme" id="theme2" value="2" onclick="theme(2)">
+                </div>
+                
+
+              </div>
+  
+              <div class="option-theme">
+                <label for="theme3">3</label>
+
+                <div class="background-radioButton background-3">
+                  <input type="radio" name="theme" id="theme3" value="3" onclick="theme(3)">
+                </div>
+                
+
+              </div>
+            </div>
+
+          </div>
+          
+  
+        </div>
+  
+      </div>
+  
+    </header>
+  
+    <section>
+  
+  
+      <article class="cointainer-screen">
+        <p class="calculator-screen" id="screen">0</p>
+      </article>
+  
+      <section class="buttons">
+  
+        <article class="button-container">
+          <button class="principal-button" data-num="7" onclick="write_element(7)">7</button>
+          <button class="principal-button" data-num="8" onclick="write_element(8)">8</button>
+          <button class="principal-button" data-num="9" onclick="write_element(9)">9</button>
+          <button class="principal-button" id="del" data-num="DEL" onclick="write_element('del')">DEL</button>
+        </article>
+
+        <article class="button-container">
+          <button class="principal-button" data-num="4" onclick="write_element(4)">4</button>
+          <button class="principal-button" data-num="5" onclick="write_element(5)">5</button>
+          <button class="principal-button" data-num="6" onclick="write_element(6)">6</button>
+          <button class="principal-button" data-num="+" onclick="write_element('+')">+</button>
+        </article>
+
+        <article class="button-container">
+          <button class="principal-button" data-num="1" onclick="write_element(1)">1</button>
+          <button class="principal-button" data-num="2" onclick="write_element(2)">2</button>
+          <button class="principal-button" data-num="3" onclick="write_element(3)">3</button>
+          <button class="principal-button" data-num="-" onclick="write_element('-')">-</button>
+        </article>
+
+        <article class="button-container">
+          <button class="principal-button" data-num="." onclick="write_element('.')">.</button>
+          <button class="principal-button" data-num="0" onclick="write_element(0)">0</button>
+          <button class="principal-button" data-num="/" onclick="write_element('/')">/</button>
+          <button class="principal-button" data-num="x" onclick="write_element('x')">x</button>
+        </article>
+
+        <article class="button-container">
+          <button class="principal-button reset" id="reset" data-num="RESET" onclick="write_element('res')">RESET</button>
+          <button class="principal-button equal" id="equal" data-num="=" onclick="calculator(num_list,screen)">=</button>
+        </article>
+  
+  
+      </section>
+    </section>
+
+  </section>
+
+  
+
+</body>
+</html>

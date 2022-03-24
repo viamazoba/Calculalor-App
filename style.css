@@ -1,0 +1,231 @@
+:root{
+    --Very-dark-main:hsl(222, 26%, 31%);
+    --screen-background: hsl(223, 31%, 20%);
+    --toggle-background: hsl(224, 36%, 15%);
+
+    --reset-color: hsl(225, 21%, 49%);
+    --reset-shadow:  hsl(224, 28%, 35%);
+
+    --equal-color: rgb(209, 62, 46);
+    --equal-shadow: rgb(147, 38, 26);
+
+    --buttons-color: hsl(30, 25%, 89%);
+    --buttons-shadow: hsl(28, 16%, 65%);
+
+    --text-color:hsl(221, 14%, 31%);
+    --equal-text: #ffffff;
+
+}
+
+*, html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Spartan', sans-serif;
+    width: 100%;
+    background-color: var(--screen-background);
+    font-weight: 700;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 65rem 1fr;
+    grid-template-rows: 1fr 70rem 1fr;
+    margin-top: 7%;
+    align-items: center;
+    justify-items: center;
+}
+
+.calculator{
+    background-color: var(--Very-dark-main);
+    width: 53rem;
+    height: 70rem;
+    grid-column: 2;
+    grid-row: 2;
+    box-shadow: 0px 0px 5px var(--text-color);
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+header{
+    display: flexbox;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+
+.calc{
+    display: inline-block;
+    font-size: 3rem;
+    color: var(--equal-text);
+    margin-right: 8rem;
+}
+
+.theme{
+    align-self: flex-end;
+    margin-bottom: 0.4rem;
+    margin-right: 1.5rem;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    color: var(--equal-text);
+}
+
+
+.father-theme{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.option-theme{
+    display: flex;
+    flex-direction: column;
+}
+
+
+input[type='radio'] {
+    -webkit-appearance:none;
+    width:25px;
+    height:25px;
+    border:none;
+    border-radius:50%;
+    outline:none;
+    box-shadow:none;
+}
+  
+input[type='radio']:hover {
+    box-shadow:0 0 3px 0px var(--equal-text) inset;
+}  
+  
+input[type='radio']:before {
+    content:'';
+    display:block;
+    width:60%;
+    height:60%;
+    margin: 20% auto;    
+    border-radius:50%;    
+}
+
+input[type='radio']:checked:before {
+    background:var(--equal-color);
+}
+
+.background-radioButton{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--toggle-background);
+    
+}  
+
+.background-1{
+    border-radius: 1rem 0 0 1rem;
+}
+
+.background-3{
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.cointainer-screen{
+    padding: 3rem 3rem;
+    height: 13rem;
+    background-color: var(--toggle-background);
+    border-radius: 1rem;
+}
+.calculator-screen{
+    width: 100%;
+    height: 7rem;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 6rem;
+    
+    border: none;
+    color: var(--equal-text);
+    text-align: right;
+}
+
+.buttons{
+    height: 100%;
+    background-color: var(--toggle-background);
+    border-radius: 1rem;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.principal-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-color);
+    width: 10rem;
+    height: 6rem;
+    background-color: var(--buttons-color);
+    border-radius: 1.3rem;
+    box-shadow:0px -5px var(--buttons-shadow) inset;
+    border: none;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.principal-button:active{
+    background-color: var(--buttons-shadow);
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.5rem 0rem;
+}
+
+.button-container .reset , .equal{
+    width: 20rem;
+    height: 6rem;
+}
+
+#reset, #del{
+    font-size: 2rem;
+    background-color: var(--reset-color);
+    box-shadow: 0px -5px var(--reset-shadow) inset;
+    color: var(--equal-text);
+}
+
+#equal{
+    font-size: 2.3rem;
+    background-color: var(--equal-color);
+    box-shadow: 0px -5px var(--equal-shadow) inset;
+    color: var(--equal-text);
+}
+
+#reset:active{
+    background-color: var(--reset-shadow);
+}
+
+#del:active{
+    background-color: var(--reset-shadow);
+}
+
+#equal:active{
+    background-color: var(--equal-shadow);
+}
+
+
+
+
+  
